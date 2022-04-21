@@ -12,17 +12,17 @@ CREATE TABLE elmasri.funcionario (
                 numero_departamento INTEGER NOT NULL,
                 CONSTRAINT pk_funcionario PRIMARY KEY (cpf)
 );
-COMMENT ON TABLE elmasri.funcionario IS 'Tabela que armazena as informaÁıes dos funcion·rios.';
-COMMENT ON COLUMN elmasri.funcionario.cpf IS 'CPF do funcion·rio. Ser· a PK da tabela.';
-COMMENT ON COLUMN elmasri.funcionario.primeiro_nome IS 'Primeiro nome do funcion·rio.';
+COMMENT ON TABLE elmasri.funcionario IS 'Tabela que armazena as informa√ß√µes dos funcion√°rios.';
+COMMENT ON COLUMN elmasri.funcionario.cpf IS 'CPF do funcion√°rio. Ser√° a PK da tabela.';
+COMMENT ON COLUMN elmasri.funcionario.primeiro_nome IS 'Primeiro nome do funcion√°rio.';
 COMMENT ON COLUMN elmasri.funcionario.nome_meio IS 'Inicial do nome do meio.';
-COMMENT ON COLUMN elmasri.funcionario.ultimo_nome IS 'Sobrenome do funcion·rio.';
-COMMENT ON COLUMN elmasri.funcionario.data_nascimento IS 'Data de nascimento do funcion·rio.';
-COMMENT ON COLUMN elmasri.funcionario.endereco IS 'EndereÁo do funcion·rio.';
-COMMENT ON COLUMN elmasri.funcionario.sexo IS 'Sexo do funcion·rio.';
-COMMENT ON COLUMN elmasri.funcionario.salario IS 'Sal·rio do funcion·rio.';
-COMMENT ON COLUMN elmasri.funcionario.cpf_supervisor IS 'CPF do supervisor. Ser· uma FK para a prÛpria tabela (um auto-relacionamento).';
-COMMENT ON COLUMN elmasri.funcionario.numero_departamento IS 'N˙mero do departamento do funcion·rio.';
+COMMENT ON COLUMN elmasri.funcionario.ultimo_nome IS 'Sobrenome do funcion√°rio.';
+COMMENT ON COLUMN elmasri.funcionario.data_nascimento IS 'Data de nascimento do funcion√°rio.';
+COMMENT ON COLUMN elmasri.funcionario.endereco IS 'Endere√ßo do funcion√°rio.';
+COMMENT ON COLUMN elmasri.funcionario.sexo IS 'Sexo do funcion√°rio.';
+COMMENT ON COLUMN elmasri.funcionario.salario IS 'Sal√°rio do funcion√°rio.';
+COMMENT ON COLUMN elmasri.funcionario.cpf_supervisor IS 'CPF do supervisor. Ser√° uma FK para a pr√≥pria tabela (um auto-relacionamento).';
+COMMENT ON COLUMN elmasri.funcionario.numero_departamento IS 'N√∫mero do departamento do funcion√°rio.';
 
 
 CREATE TABLE elmasri.departamento (
@@ -32,11 +32,11 @@ CREATE TABLE elmasri.departamento (
                 data_inicio_gerente DATE,
                 CONSTRAINT pk_departamento PRIMARY KEY (numero_departamento)
 );
-COMMENT ON TABLE elmasri.departamento IS 'Tabela que armazena as informaÁo?s dos departamentos.';
-COMMENT ON COLUMN elmasri.departamento.numero_departamento IS 'N˙mero do departamento. … a PK desta tabela.';
-COMMENT ON COLUMN elmasri.departamento.nome_departamento IS 'Nome do departamento. Deve ser ˙nico.';
-COMMENT ON COLUMN elmasri.departamento.cpf_gerente IS 'CPF do gerente do departamento. … uma FK para a tabela funcion·rios.';
-COMMENT ON COLUMN elmasri.departamento.data_inicio_gerente IS 'Data do inÌcio do gerente no departamento.';
+COMMENT ON TABLE elmasri.departamento IS 'Tabela que armazena as informa√ßo?s dos departamentos.';
+COMMENT ON COLUMN elmasri.departamento.numero_departamento IS 'N√∫mero do departamento. √â a PK desta tabela.';
+COMMENT ON COLUMN elmasri.departamento.nome_departamento IS 'Nome do departamento. Deve ser √∫nico.';
+COMMENT ON COLUMN elmasri.departamento.cpf_gerente IS 'CPF do gerente do departamento. √â uma FK para a tabela funcion√°rios.';
+COMMENT ON COLUMN elmasri.departamento.data_inicio_gerente IS 'Data do in√≠cio do gerente no departamento.';
 
 
 CREATE UNIQUE INDEX departamento_idx
@@ -50,11 +50,11 @@ CREATE TABLE elmasri.projeto (
                 numero_departamento INTEGER NOT NULL,
                 CONSTRAINT pk_projeto PRIMARY KEY (numero_projeto)
 );
-COMMENT ON TABLE elmasri.projeto IS 'Tabela que armazena as informaÁıes sobre os projetos dos departamentos.';
-COMMENT ON COLUMN elmasri.projeto.numero_projeto IS 'N˙mero do projeto. … a PK desta tabela.';
-COMMENT ON COLUMN elmasri.projeto.nome_projeto IS 'Nome do projeto. Deve ser ˙nico.';
-COMMENT ON COLUMN elmasri.projeto.local_projeto IS 'LocalizaÁ„o do projeto.';
-COMMENT ON COLUMN elmasri.projeto.numero_departamento IS 'N˙mero do departamento. … uma FK para a tabela departamento.';
+COMMENT ON TABLE elmasri.projeto IS 'Tabela que armazena as informa√ß√µes sobre os projetos dos departamentos.';
+COMMENT ON COLUMN elmasri.projeto.numero_projeto IS 'N√∫mero do projeto. √â a PK desta tabela.';
+COMMENT ON COLUMN elmasri.projeto.nome_projeto IS 'Nome do projeto. Deve ser √∫nico.';
+COMMENT ON COLUMN elmasri.projeto.local_projeto IS 'Localiza√ß√£o do projeto.';
+COMMENT ON COLUMN elmasri.projeto.numero_departamento IS 'N√∫mero do departamento. √â uma FK para a tabela departamento.';
 
 
 CREATE UNIQUE INDEX projeto_idx
@@ -66,9 +66,9 @@ CREATE TABLE elmasri.localizacoes_departamento (
                 local VARCHAR(15) NOT NULL,
                 CONSTRAINT pk_localizacoes_departamento PRIMARY KEY (numero_departamento, local)
 );
-COMMENT ON TABLE elmasri.localizacoes_departamento IS 'Tabela que armazena as possÌveis localizaÁıes dos departamentos.';
-COMMENT ON COLUMN elmasri.localizacoes_departamento.numero_departamento IS 'N˙mero do departamento. Faz parta da PK desta tabela e tambÈm È uma FK para a tabela departamento.';
-COMMENT ON COLUMN elmasri.localizacoes_departamento.local IS 'LocalizaÁ„o do departamento. Faz parte da PK desta tabela.';
+COMMENT ON TABLE elmasri.localizacoes_departamento IS 'Tabela que armazena as poss√≠veis localiza√ß√µes dos departamentos.';
+COMMENT ON COLUMN elmasri.localizacoes_departamento.numero_departamento IS 'N√∫mero do departamento. Faz parta da PK desta tabela e tamb√©m √© uma FK para a tabela departamento.';
+COMMENT ON COLUMN elmasri.localizacoes_departamento.local IS 'Localiza√ß√£o do departamento. Faz parte da PK desta tabela.';
 
 
 CREATE TABLE elmasri.dependente (
@@ -79,12 +79,12 @@ CREATE TABLE elmasri.dependente (
                 parentesco VARCHAR(15),
                 CONSTRAINT pk_dependente PRIMARY KEY (cpf_funcionario, nome_dependente)
 );
-COMMENT ON TABLE elmasri.dependente IS 'Tabela que armazena as informaÁıes dos dependentes dos funcion·rios.';
-COMMENT ON COLUMN elmasri.dependente.cpf_funcionario IS 'CPF do funcion·rio. Faz parte da PK desta tabela e È uma FK para a tabela funcion·rio.';
+COMMENT ON TABLE elmasri.dependente IS 'Tabela que armazena as informa√ß√µes dos dependentes dos funcion√°rios.';
+COMMENT ON COLUMN elmasri.dependente.cpf_funcionario IS 'CPF do funcion√°rio. Faz parte da PK desta tabela e √© uma FK para a tabela funcion√°rio.';
 COMMENT ON COLUMN elmasri.dependente.nome_dependente IS 'Nome do dependente. Faz parte da PK desta tabela.';
 COMMENT ON COLUMN elmasri.dependente.sexo IS 'Sexo do dependente.';
 COMMENT ON COLUMN elmasri.dependente.deta_nascimento IS 'Data de nascimento do dependente.';
-COMMENT ON COLUMN elmasri.dependente.parentesco IS 'DescriÁ„o do parentesco do dependente com o funcion·rio.';
+COMMENT ON COLUMN elmasri.dependente.parentesco IS 'Descri√ß√£o do parentesco do dependente com o funcion√°rio.';
 
 
 CREATE TABLE elmasri.trabalha_em (
@@ -93,12 +93,12 @@ CREATE TABLE elmasri.trabalha_em (
                 horas NUMERIC(3,1) NOT NULL,
                 CONSTRAINT pk_trabalha_em PRIMARY KEY (cpf_funcionario, numero_projeto)
 );
-COMMENT ON TABLE elmasri.trabalha_em IS 'Tabela para armazenar quais funcion·rios trabalham em quais projetos.
+COMMENT ON TABLE elmasri.trabalha_em IS 'Tabela para armazenar quais funcion√°rios trabalham em quais projetos.
 
 ';
-COMMENT ON COLUMN elmasri.trabalha_em.cpf_funcionario IS 'CPF do funcion·rio. Faz parte da PK desta tabela e È uma FK para a tabela funcion·rio.';
-COMMENT ON COLUMN elmasri.trabalha_em.numero_projeto IS 'N˙mero do projeto. Faz parte da PK desta tabela e È uma FK para a tabela projeto.';
-COMMENT ON COLUMN elmasri.trabalha_em.horas IS 'Horas trabalhadas pelo funcion·rio neste projeto.';
+COMMENT ON COLUMN elmasri.trabalha_em.cpf_funcionario IS 'CPF do funcion√°rio. Faz parte da PK desta tabela e √© uma FK para a tabela funcion√°rio.';
+COMMENT ON COLUMN elmasri.trabalha_em.numero_projeto IS 'N√∫mero do projeto. Faz parte da PK desta tabela e √© uma FK para a tabela projeto.';
+COMMENT ON COLUMN elmasri.trabalha_em.horas IS 'Horas trabalhadas pelo funcion√°rio neste projeto.';
 
 
 ALTER TABLE elmasri.trabalha_em ADD CONSTRAINT funcionario_trabalha_em_fk
