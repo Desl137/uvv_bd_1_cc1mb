@@ -3,7 +3,7 @@
 
 Este repositório é dedicado aos Problem Sets (PSets) do Professor Abrantes em relação a matéria de design e desenvolvimento de banco de dados.
 
-O Commit **PSET 1 FINAL** é referente ao primeiro PSet, que por usa vez se baseia na implementação de um modelo relacional do Elmasri nos SGBDs PostgreSQL e MariaDB.
+O Commit **PSET 1 FINAL** é referente ao primeiro PSet, que por usa vez se baseia na implementação de um modelo relacional do Elmasri nos sistemas de gerenciamento de banco de dados (SGBD) PostgreSQL e MariaDB.
 
 Os arquivos relacionados a esse *Commit* são "Postgresql.User&Database", "Postgresql.TabelasElmasri&Dados.VersãoFinal", "MariaDB.TabelasElmasri&Dados.VersãoFinal" e "Tabelas.Elmasri.VersãoFinal".
 
