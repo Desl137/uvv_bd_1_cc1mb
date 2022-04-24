@@ -14,7 +14,7 @@ Os arquivos relacionados a esse *Commit* são "Postgresql.User&Database", "Postg
     
 2. Inserir a senha para o usuário **123**.
 3. Executar o arquivo *script* "Postgresql.TabelaElmasri&Dados.VersãoFinal".
-    > Nele contém os comandos para a criação de um schema, configuração do caminho ao schema, criação das tabelas com suas devidas restrições (*constraints*) e seus devidos comentários e pôr fim a inserção de seus dados.
+    > Nele contém os comandos para a criação de um *schema*, configuração do caminho ao *schema*, criação das tabelas com suas devidas restrições (*constraints*) e seus devidos comentários e pôr fim a inserção de seus dados.
 
 ### No que diz respeito à execução no MariaDB é necessário executar apenas o seguinte arquivo:
 
