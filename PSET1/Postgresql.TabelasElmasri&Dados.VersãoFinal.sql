@@ -106,42 +106,42 @@ FOREIGN KEY (cpf_funcionario)
 REFERENCES elmasri.funcionario (cpf)
 ON DELETE NO ACTION
 ON UPDATE NO ACTION
-NOT DEFERRABLE;
+;
 
 ALTER TABLE elmasri.dependente ADD CONSTRAINT funcionario_dependente_fk
 FOREIGN KEY (cpf_funcionario)
 REFERENCES elmasri.funcionario (cpf)
 ON DELETE NO ACTION
 ON UPDATE NO ACTION
-NOT DEFERRABLE;
+;
 
 ALTER TABLE elmasri.departamento ADD CONSTRAINT funcionario_departamento_fk
 FOREIGN KEY (cpf_gerente)
 REFERENCES elmasri.funcionario (cpf)
 ON DELETE NO ACTION
 ON UPDATE NO ACTION
-NOT DEFERRABLE;
+;
 
 ALTER TABLE elmasri.localizacoes_departamento ADD CONSTRAINT departamento_localizacoes_departamento_fk
 FOREIGN KEY (numero_departamento)
 REFERENCES elmasri.departamento (numero_departamento)
 ON DELETE NO ACTION
 ON UPDATE NO ACTION
-NOT DEFERRABLE;
+;
 
 ALTER TABLE elmasri.projeto ADD CONSTRAINT departamento_projeto_fk
 FOREIGN KEY (numero_departamento)
 REFERENCES elmasri.departamento (numero_departamento)
 ON DELETE NO ACTION
 ON UPDATE NO ACTION
-NOT DEFERRABLE;
+;
 
 ALTER TABLE elmasri.trabalha_em ADD CONSTRAINT projeto_trabalha_em_fk
 FOREIGN KEY (numero_projeto)
 REFERENCES elmasri.projeto (numero_projeto)
 ON DELETE NO ACTION
 ON UPDATE NO ACTION
-NOT DEFERRABLE;
+;
 
 ALTER TABLE elmasri.funcionario ALTER COLUMN cpf_supervisor DROP NOT NULL;
 ALTER TABLE elmasri.trabalha_em ALTER COLUMN horas DROP NOT NULL;
