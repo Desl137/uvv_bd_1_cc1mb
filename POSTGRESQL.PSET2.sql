@@ -92,7 +92,7 @@ ORDER BY dp.nome_departamento;
 
 SELECT
  CONCAT(f.primeiro_nome,' ',f.nome_meio,' ',f.ultimo_nome) AS "Nome completo do funcionário"
-,dt.nome_departamento AS "Nome do departamento"
+, dt.nome_departamento AS "Nome do departamento"
 , CASE 
     WHEN d.nome_dependente IS NULL 
     THEN f.salario
@@ -166,7 +166,7 @@ ORDER BY CONCAT(f.primeiro_nome,' ',f.nome_meio,' ',f.ultimo_nome), p.nome_proje
 -- Questão 12
 
 SELECT
-d.nome_departamento AS "Nome do Departamento"
+ d.nome_departamento AS "Nome do Departamento"
 , p.nome_projeto AS "Nome do Projeto"
 , CONCAT(f.primeiro_nome,' ',f.nome_meio,' ',f.ultimo_nome) AS "Nome completo do funcionário"
 , t.horas AS "Horas Trabalhadas"
@@ -202,8 +202,8 @@ ORDER BY "Idade" DESC;
 
 -- Questão 14
 
-SELECT 
-d.nome_departamento AS "Nome do Departamento"
+SELECT
+ d.nome_departamento AS "Nome do Departamento"
 , CASE 
     WHEN f.numero_departamento = d.numero_departamento 
     THEN COUNT(f.cpf) end as "Total de Funcionários"
@@ -216,7 +216,7 @@ ORDER BY "Total de Funcionários" DESC;
 -- Questão 15 ****
 
 SELECT
-CONCAT(f.primeiro_nome,' ',f.nome_meio,' ',f.ultimo_nome) AS "Nome completo"
+ CONCAT(f.primeiro_nome,' ',f.nome_meio,' ',f.ultimo_nome) AS "Nome completo"
 , d.nome_departamento AS "Nome do departamento"
 , p.nome_projeto AS "Nome do projeto"
 FROM elmasri.trabalha_em t
